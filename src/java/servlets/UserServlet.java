@@ -91,6 +91,7 @@ public class UserServlet extends HttpServlet {
                         int roleId = Integer.parseInt(roleIdStr);
                         RoleDB roleDB = new RoleDB();
                         Role role = roleDB.getRole(roleId);
+                        
                         us.insert(email, firstName, lastName, password, roleId);
                     } else {
                         request.setAttribute("error", "All fields are required");
@@ -100,6 +101,7 @@ public class UserServlet extends HttpServlet {
                         int roleId = Integer.parseInt(roleIdStr);
                         RoleDB roleDB = new RoleDB();
                         Role role = roleDB.getRole(roleId);
+                        
                         us.update(email, firstName, lastName, password, roleId);
                     } else {
                         request.setAttribute("error", "All fields are required");
