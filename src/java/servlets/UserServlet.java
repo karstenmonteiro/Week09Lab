@@ -80,7 +80,7 @@ public class UserServlet extends HttpServlet {
         String lastName = request.getParameter("lastname");
         String password = request.getParameter("password");
         String roleIdStr = request.getParameter("roleId");
-
+        
         String action = request.getParameter("action");
         action = action == null ? "" : action;
 
