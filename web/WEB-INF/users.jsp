@@ -43,11 +43,11 @@
                 </tbody>
             </table>
         </c:if>
-
+        
         <c:if test="${empty users}">
             <h4>No users found. Please add a user.</h4>
         </c:if>
-
+            
         <c:if test="${isEdit eq null}">
             <h2>Add User</h2>
             <form action="users" method="post">
@@ -63,7 +63,6 @@
                 <input type="hidden" name="action" value="add" />
                 <input class="input-primary" type="submit" value="Add user"/>
             </form>
-
         </c:if>
 
         <c:if test="${isEdit eq true}">
@@ -86,7 +85,6 @@
                 </a>
             </form>
         </c:if>
-
 
         <c:if test="${error ne null}">
             <div>
